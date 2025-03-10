@@ -17,10 +17,10 @@ carpentry: 'lc'
 # carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
-title: 'R-statistic'
+title: 'R-toolbox'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: '2025-03-10'
+created: '2024-04-09'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson'
@@ -33,7 +33,7 @@ life_cycle: 'pre-alpha'
 license: 'CC BY-NC-SA 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/KUBDatalab/R-statistic'
+source: 'https://github.com/KUBDatalab/R-toolbox'
 
 # Default branch of your lesson
 branch: 'main'
@@ -65,30 +65,29 @@ contact: 'kubdatalab@kb.dk'
 
 # Order of episodes in your lesson
 episodes: 
-
-#- reproducible-analysis.Rmd
-#- reading-files.Rmd
+- reproducible-analysis.Rmd
+- reading-files.Rmd
 - descript-stat.Rmd
-#- table1.Rmd
+- table1.Rmd
 - tidy-data.Rmd
 - normal-distribution.Rmd
 - is-it-normal.Rmd
 - which-distribution.Rmd
 - linear-regression.Rmd
 - multiple-linear-regression.Rmd
-#- logistic-regression.Rmd
-#- clt.Rmd
-#- barcharts.Rmd
-#- powerberegninger.Rmd
-#- kmeans.Rmd
-#- tuning-kmeans.Rmd
-#- anova.Rmd
-#- ucloud.Rmd
-#- pipes.Rmd
-#- gis_setup.Rmd
-#- fence-test.Rmd
-#- making-a-new-course.Rmd
-#- shinylive.Rmd
+- logistic-regression.Rmd
+- clt.Rmd
+- barcharts.Rmd
+- powerberegninger.Rmd
+- kmeans.Rmd
+- tuning-kmeans.Rmd
+- anova.Rmd
+- ucloud.Rmd
+- pipes.Rmd
+- gis_setup.Rmd
+- fence-test.Rmd
+- making-a-new-course.Rmd
+- shinylive.Rmd
 
 # Information for Learners
 learners: 

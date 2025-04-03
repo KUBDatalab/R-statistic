@@ -73,7 +73,7 @@ episodes:
 - tidy-data.Rmd
 - normal-distribution.Rmd
 - is-it-normal.Rmd
-- which-distribution.Rmd
+# - which-distribution.Rmd
 - linear-regression.Rmd
 - multiple-linear-regression.Rmd
 #- logistic-regression.Rmd

@@ -20,7 +20,7 @@
       <div class="large-logo">
         <img id="lc-logo" alt="Library Carpentry" src="../assets/images/library-logo.svg"><span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
-            <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link">
+            <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
               <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
               Pre-Alpha
             </a>
@@ -330,7 +330,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Testing for normality</h1>
-        <p>Last updated on 2025-04-15 |
+        <p>Last updated on 2025-12-02 |
 
         <a href="https://github.com/KUBDatalab/R-statistic/edit/main/episodes/is-it-normal.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -422,7 +422,7 @@ closer look at bill_depth_mm where mean and median are closest:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre class="output" tabindex="0"><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 </div>
 <figure><img src="../fig/is-it-normal-rendered-histogram-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>This does not really look like a normal distribution. The fact that
 mean and median are almost identical was not a sufficient criterium for
@@ -480,8 +480,8 @@ normally distributed.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>We have two tails in the qq-plot, a left and a right. And they can be
 either above or below the qq-line.</p>
@@ -528,7 +528,20 @@ line before the data is not normally distributed <em>enough</em>?</p>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">e1071</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+Attaching package: 'e1071'</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The following object is masked from 'package:ggplot2':
+
+    element</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -540,7 +553,7 @@ line before the data is not normally distributed <em>enough</em>?</p>
 <pre class="output" tabindex="0"><code>[1] 0.006578141</code></pre>
 </div>
 <p>kurtosis</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -593,7 +606,7 @@ normally distributed quantiles, what we see in the qqplot.</p>
 <p>The null-hypothesis is that data is normally distributed, and the
 Shapiro-Wilk test returns a p-value reporting the risk of being wrong if
 we reject the null-hypothesis.</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -620,7 +633,7 @@ this, we need to specify the specific distribution we are testing for,
 in this case a normal distribution with specific values for mean and
 standard deviation.</p>
 <p>Therefore we need to calculate those:</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -663,7 +676,7 @@ testing for normality. It does not require us to know the true mean and
 standard deviation for the population.</p>
 <p>This test is also not available in base-R, but can be found in the
 <code>nortest</code> package:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -687,7 +700,7 @@ null-hypothesis.</p>
 <p>This test is more sensitive for deviations in the tails.</p>
 <p>It is not available in base-R, but can be found in the
 <code>nortest</code> package.</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -720,8 +733,8 @@ to conclude that it is not.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Use <code>.md</code> files for episodes when you want static
 content</li>
@@ -774,7 +787,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC BY-NC-SA 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.7" class="external-link">varnish (1.0.7)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -785,10 +798,10 @@ any links that you are not going to use.
   <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "TrainingMaterial",
+  "@type": "LearningResource",
   "@id": "https://KUBDatalab.github.io/R-statistic/instructor/is-it-normal.html",
   "inLanguage": "en",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson",
   "name": "Testing for normality",
@@ -796,8 +809,8 @@ any links that you are not going to use.
   "url": "https://KUBDatalab.github.io/R-statistic/instructor/is-it-normal.html",
   "identifier": "https://KUBDatalab.github.io/R-statistic/instructor/is-it-normal.html",
   "dateCreated": "2025-03-10",
-  "dateModified": "2025-04-15",
-  "datePublished": "2025-04-15"
+  "dateModified": "2025-12-02",
+  "datePublished": "2025-12-02"
 }
 
   </script><script>

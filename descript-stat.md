@@ -58,6 +58,20 @@ the actual data is called `penguins` and is part of the package `palmerpenguins`
 
 ``` r
 library(palmerpenguins)
+```
+
+``` output
+
+Attaching package: 'palmerpenguins'
+```
+
+``` output
+The following objects are masked from 'package:datasets':
+
+    penguins, penguins_raw
+```
+
+``` r
 head(penguins)
 ```
 
@@ -464,7 +478,7 @@ geom_histogram()
 ```
 
 ``` output
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value `binwidth`.
 ```
 
 ``` warning
@@ -657,6 +671,20 @@ the library `e1071`
 
 ``` r
 library(e1071)
+```
+
+``` output
+
+Attaching package: 'e1071'
+```
+
+``` output
+The following object is masked from 'package:ggplot2':
+
+    element
+```
+
+``` r
 skewness(penguins$body_mass_g, na.rm = T)
 ```
 

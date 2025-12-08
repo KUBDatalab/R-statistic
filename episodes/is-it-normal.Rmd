@@ -31,8 +31,8 @@ distribution.
 Let us get some data that we can test:
 
 ```{r making_test_data}
-normal_test_data <- penguins %>% 
-  filter(species == "Chinstrap") %>% 
+normal_test_data <- penguins |>
+  filter(species == "Chinstrap") |>
   select(bill_depth_mm)
 ```
 
@@ -52,7 +52,7 @@ What next. A histogram of the data should look normal. Let us take a
 closer look at bill_depth_mm where mean and median are closest:
 
 ```{r histogram}
-normal_test_data %>% 
+normal_test_data |>
   ggplot(aes(x=bill_depth_mm)) +
   geom_histogram()
 ```
@@ -65,7 +65,7 @@ The shape of a histogram is heavily dependent on the bins we choose. A
 better way of visualizing often density-plots:
 
 ```{r densityplot}
-normal_test_data %>% 
+normal_test_data |> 
   ggplot(aes(x=bill_depth_mm)) +
   geom_density()
 ```
@@ -95,7 +95,7 @@ Rather than doing that by hand, we can get R to do it for us in a nice
 graphical way:
 
 ```{r qq-plot}
-normal_test_data %>% 
+normal_test_data |>
   ggplot(aes(sample = bill_depth_mm)) +
   geom_qq() +
   geom_qq_line()

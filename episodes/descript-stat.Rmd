@@ -94,7 +94,7 @@ A slightly more cumbersome way is using the `summarise()` function from
 `tidyverse`:
 
 ```{r tidy_middel_pingvin_masse}
-penguins |> |
+penguins |>
   summarise(avg_mass = mean(body_mass_g, na.rm = T))
 ```
 

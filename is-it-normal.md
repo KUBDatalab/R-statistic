@@ -33,8 +33,8 @@ Let us get some data that we can test:
 
 
 ``` r
-normal_test_data <- penguins %>% 
-  filter(species == "Chinstrap") %>% 
+normal_test_data <- penguins |>
+  filter(species == "Chinstrap") |>
   select(bill_depth_mm)
 ```
 
@@ -66,7 +66,7 @@ closer look at bill_depth_mm where mean and median are closest:
 
 
 ``` r
-normal_test_data %>% 
+normal_test_data |>
   ggplot(aes(x=bill_depth_mm)) +
   geom_histogram()
 ```
@@ -86,7 +86,7 @@ better way of visualizing often density-plots:
 
 
 ``` r
-normal_test_data %>% 
+normal_test_data |> 
   ggplot(aes(x=bill_depth_mm)) +
   geom_density()
 ```
@@ -119,7 +119,7 @@ graphical way:
 
 
 ``` r
-normal_test_data %>% 
+normal_test_data |>
   ggplot(aes(sample = bill_depth_mm)) +
   geom_qq() +
   geom_qq_line()

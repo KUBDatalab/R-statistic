@@ -42,7 +42,7 @@ library(tidyverse)
 ```
 
 ``` r
-cars %>% 
+cars |>
   ggplot(aes(speed,dist)) +
   geom_point()
 ```
@@ -73,7 +73,7 @@ Let's do that:
 
 
 ``` r
-cars %>% 
+cars |>
   ggplot(aes(speed,dist)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)

@@ -396,7 +396,7 @@ where all variables are suffixed with the digit “2”:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">density</span> <span class="op">&lt;-</span> <span class="va">boneden</span> <span class="op">%&gt;%</span> <span class="fu">select</span><span class="op">(</span><span class="va">age</span>, <span class="fu">contains</span><span class="op">(</span><span class="st">"2"</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">density</span> <span class="op">&lt;-</span> <span class="va">boneden</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="va">age</span>, <span class="fu">contains</span><span class="op">(</span><span class="st">"2"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">head</span><span class="op">(</span><span class="va">density</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
@@ -440,7 +440,7 @@ height, can be done with:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span>, data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span>, data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summary</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
@@ -487,7 +487,7 @@ the result to the summary function to take a closer look:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">wt2</span> <span class="op">+</span> <span class="va">tea2</span> <span class="op">+</span> <span class="va">cof2</span>, data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">wt2</span> <span class="op">+</span> <span class="va">tea2</span> <span class="op">+</span> <span class="va">cof2</span>, data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span><span class="fu">summary</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
@@ -545,7 +545,7 @@ p-value:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">wt2</span> <span class="op">+</span> <span class="va">tea2</span>, data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu">summary</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">wt2</span> <span class="op">+</span> <span class="va">tea2</span>, data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">summary</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -612,7 +612,7 @@ next one we will remove:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">wt2</span> , data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu">summary</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">wt2</span> , data <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">summary</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -693,7 +693,7 @@ included.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">dens_exercise</span> <span class="op">&lt;-</span> <span class="va">boneden</span> <span class="op">%&gt;%</span> </span>
+<code class="sourceCode R"><span><span class="va">dens_exercise</span> <span class="op">&lt;-</span> <span class="va">boneden</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">age</span>, <span class="fu">contains</span><span class="op">(</span><span class="st">"1"</span><span class="op">)</span>, <span class="op">-</span><span class="fu">c</span><span class="op">(</span><span class="va">cur1</span>, <span class="va">ls1</span>, <span class="va">fn1</span>, <span class="va">men1</span> <span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">model_1</span> <span class="op">&lt;-</span> <span class="fu">lm</span><span class="op">(</span><span class="va">fs1</span><span class="op">~</span><span class="va">.</span>, data <span class="op">=</span> <span class="va">dens_exercise</span><span class="op">)</span></span>
@@ -725,7 +725,7 @@ included.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">density</span> <span class="op">&lt;-</span> <span class="va">density</span> <span class="op">%&gt;%</span> </span>
+<code class="sourceCode R"><span><span class="va">density</span> <span class="op">&lt;-</span> <span class="va">density</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>men2 <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="va">men2</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">cat_model</span> <span class="op">&lt;-</span> <span class="fu">lm</span><span class="op">(</span><span class="va">fs2</span> <span class="op">~</span> <span class="va">ht2</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">wt2</span> <span class="op">+</span> <span class="va">men2</span>, data <span class="op">=</span> <span class="va">density</span><span class="op">)</span></span>

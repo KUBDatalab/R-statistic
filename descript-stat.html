@@ -499,15 +499,17 @@ function from <code>tidyverse</code>:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>penguins <span class="sc">|&gt;</span> <span class="er">|</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_mass =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> T))</span></code></pre>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarise</span><span class="op">(</span>avg_mass <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in parse(text = input): &lt;text&gt;:1:13: unexpected '|'
-1: penguins |&gt; |
-                ^</code></pre>
+<pre class="output" tabindex="0"><code># A tibble: 1 × 1
+  avg_mass
+     &lt;dbl&gt;
+1    4202.</code></pre>
 </div>
 <p>As we will see below, this function streamlines the process of
 getting multiple descriptive values.</p>

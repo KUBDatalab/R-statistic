@@ -8,9 +8,8 @@ title: Setup
 
 ### Warning
 
-Please do NOT install R, Positron and RStudio on Onedrive or other clouddrives.
-R will work but you will not be able to install the extensions to R
-that you will need in this course!
+Please do NOT install R, Positron and RStudio on Onedrive or other cloud drives.
+R will work but you will not be able to install the extensions to R needed in this course!
 
 ::::::::::::
 
@@ -20,7 +19,7 @@ that you will need in this course!
 
 **R** and **Positron** are separate downloads and installations. R is the
 underlying statistical computing environment, but using R alone is no
-fun. Positron is a graphical integrated development environment (IDE) that makes
+fun. Positron is a graphical Integrated Development Environment (IDE) that makes
 using R much easier and more interactive. You need to install R before you
 install Positron. Once installed, because Positron is an IDE, Positron will run R in 
 the background. You do not need to run R separately.
@@ -37,7 +36,7 @@ Please note that the short cut (ctrl + shift + m) in Positron will give you the 
 Rather than installing R and Positron on your personal computer, 
 [Posit Cloud](https://posit.cloud//) offers a free, online alternative,
 where you will be able to run R and RStudio in your browser. 
-Sign up with your Google/Gmail account if you have one, or with any other email.
+Sign up with your email address.
 
 The free version of RStudio Cloud places limitations on the number of projects you
 can work on, and the amount of memory and processing power you can access. For the 
@@ -52,32 +51,32 @@ recommend if you have any problems installing R and Positron on your personal co
 
 #### If you already have R and RStudio installed
 
-In the course we will be using Positron. If you prefer to continue using RStudio, that is not a problem, but please do the following.
+In the course we will be using Positron. If you prefer to continue using RStudio, that is not a problem, but please do the following:
 
 * Open RStudio, and click on "Help" > "Check for updates". If a new version is
-	available, quit RStudio, and download the latest version for RStudio.
+	available, quit RStudio, and download the latest version of RStudio.
 * To check which version of R you are using, start RStudio and the first thing
   that appears in the console indicates the version of R you are
   running. Alternatively, you can type `sessionInfo()`, which will also display
-  which version of R you are running. Go on
+  which version of R you are running. Go to
   the [CRAN website](https://cran.r-project.org/bin/windows/base/) and check
-  whether a more recent version is available. If so, please download and install
+  if a more recent version is available. If so, please download and install
   it. You can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f) for
   more information on how to remove old versions from your system if you wish to do so.
-* In any case, make sure you have at least R 4.5.
+* In any case, make sure you have at least R 4.5 installed.
 
 #### If you already have R and Positron installed
 
-* Open Positron, and click on the "Cogwheel" (lower left corner) > "Check for updates". If a new version is 	available, it will be installed in the backgound.
+* Open Positron, and click on the "cogwheel" (lower left corner) > "Check for updates". If a new version is available, it will be installed in the background.
 * To check which version of R you are using, start Positron and the first thing
   that appears in the console indicates the version of R you are
   running. Alternatively, you can type `sessionInfo()`, which will also display
-  which version of R you are running. Go on
+  which version of R you are running. Go to
   the [CRAN website](https://cran.r-project.org/bin/windows/base/) and check
-  whether a more recent version is available. If so, please download and install
+  if a more recent version is available. If so, please download and install
   it. You can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f) for
   more information on how to remove old versions from your system if you wish to do so.
-* In any case, make sure you have at least R 4.5.
+* In any case, make sure you have at least R 4.5 installed.
 
 #### If you don't have R and Positron installed
 
@@ -101,23 +100,22 @@ In the course we will be using Positron. If you prefer to continue using RStudio
 
 In the course we will be using Positron. If you prefer to continue using RStudio, that is not a problem, but please do the following.
 
-* Open RStudio, and click on "Help" > "Check for updates". If a new version is
-	available, quit RStudio, and download the latest version for RStudio.
+* Open RStudio, and click on "Help" > "Check for updates". If a new version is available, quit RStudio, and download the latest version for RStudio.
 * To check the version of R you are using, start RStudio and the first thing
-  that appears on the terminal indicates the version of R you are running. Alternatively, you can type `sessionInfo()`, which will also display which version of R you are running. Go on
+  that appears on the terminal indicates the version of R you are running. Alternatively, you can type `sessionInfo()`, which will also display which version of R you are running. Go to
   the [CRAN website](https://cran.r-project.org/bin/macosx/) and check
-  whether a more recent version is available. If so, please download and install
+  if a more recent version is available. If so, please download and install
   it. 
-* In any case, make sure you have at least R 4.5.
+* In any case, make sure you have at least R 4.5 installed.
 
 ### If you already have R and Positron installed
-* Open Positron, and click on the "Cogwheel" (lower left corner) > "Check for updates". If a new version is 	available, it will be installed in the backgound.
+* Open Positron, and click on the "cogwheel" (lower left corner) > "Check for updates". If a new version is available, it will be installed in the backgound.
 * To check the version of R you are using, start RStudio and the first thing
-  that appears on the terminal indicates the version of R you are running. Alternatively, you can type `sessionInfo()`, which will also display which version of R you are running. Go on
+  that appears on the terminal indicates the version of R you are running. Alternatively, you can type `sessionInfo()`, which will also display which version of R you are running. Go to
   the [CRAN website](https://cran.r-project.org/bin/macosx/) and check
-  whether a more recent version is available. If so, please download and install
+  if a more recent version is available. If so, please download and install
   it. 
-* In any case, make sure you have at least R 4.5.
+* In any case, make sure you have at least R 4.5 installed.
 
 
 #### If you don't have R and Positron installed

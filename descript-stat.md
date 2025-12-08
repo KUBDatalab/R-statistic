@@ -142,14 +142,15 @@ A slightly more cumbersome way is using the `summarise()` function from
 
 
 ``` r
-penguins |> |
+penguins |>
   summarise(avg_mass = mean(body_mass_g, na.rm = T))
 ```
 
-``` error
-Error in parse(text = input): <text>:1:13: unexpected '|'
-1: penguins |> |
-                ^
+``` output
+# A tibble: 1 × 1
+  avg_mass
+     <dbl>
+1    4202.
 ```
 
 As we will see below, this function streamlines the process of getting multiple

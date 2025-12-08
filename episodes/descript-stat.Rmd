@@ -54,7 +54,7 @@ library(tidyverse)
 In the following we are working with the `palmerpenguins` dataset. Note that
 the actual data is called `penguins` and is part of the package `palmerpenguins`:
 
-```{r pingviner}
+```{r pingviner, message=FALSE, warning = FALSE}
 library(palmerpenguins)
 head(penguins)
 ```

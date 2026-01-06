@@ -331,7 +331,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Testing for normality</h1>
-        <p>Last updated on 2025-12-08 |
+        <p>Last updated on 2026-01-06 |
 
         <a href="https://github.com/KUBDatalab/R-statistic/edit/main/episodes/is-it-normal.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -425,7 +425,7 @@ closer look at bill_depth_mm where mean and median are closest:</p>
 </h3>
 <pre class="output" tabindex="0"><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 </div>
-<figure><img src="../fig/is-it-normal-rendered-histogram-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>This does not really look like a normal distribution. The fact that
+<figure><img src="../fig/is-it-normal-rendered-histogram-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>This does not really look like a normal distribution. The fact that
 mean and median are almost identical was not a sufficient criterium for
 normalcy.</p>
 <p>The shape of a histogram is heavily dependent on the bins we choose.
@@ -438,7 +438,7 @@ A better way of visualizing often density-plots:</p>
 <span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">bill_depth_mm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_density</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="../fig/is-it-normal-rendered-densityplot-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>We can think of this as a histogram with infinitely small bins.</p>
+<figure><img src="../fig/is-it-normal-rendered-densityplot-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>We can think of this as a histogram with infinitely small bins.</p>
 <p>This does look more normal - but it would be nice to be able to
 quantize the degree of normalcy.</p>
 </div>
@@ -465,7 +465,7 @@ nice graphical way:</p>
 <span>  <span class="fu">geom_qq</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_qq_line</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="../fig/is-it-normal-rendered-qq-plot-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The <code>geom_qq</code> function calculate and plots which
+<figure><img src="../fig/is-it-normal-rendered-qq-plot-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The <code>geom_qq</code> function calculate and plots which
 percentile an observation is in.</p>
 <p>Rather than being given percentiles, we are given the value that the
 percentile corresponds to if we calculate it as number of standard
@@ -510,7 +510,7 @@ larger.</td>
 <td>Left skewed</td>
 <td>A tail that stretches to the lower values - the extreme values are
 smaller.</td>
-</tr></tbody></table><figure><img src="../fig/is-it-normal-rendered-unnamed-chunk-1-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+</tr></tbody></table><figure><img src="../fig/is-it-normal-rendered-unnamed-chunk-1-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="numerical-measures-rather-than-graphical">Numerical measures rather than graphical<a class="anchor" aria-label="anchor" href="#numerical-measures-rather-than-graphical"></a></h2>
@@ -812,7 +812,7 @@ any links that you are not going to use.
   "url": "https://KUBDatalab.github.io/R-statistic/instructor/is-it-normal.html",
   "identifier": "https://KUBDatalab.github.io/R-statistic/instructor/is-it-normal.html",
   "dateCreated": "2025-03-10",
-  "dateModified": "2025-12-08",
+  "dateModified": "2026-01-06",
   "datePublished": "2026-01-06"
 }
 

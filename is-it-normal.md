@@ -75,7 +75,7 @@ normal_test_data |>
 `stat_bin()` using `bins = 30`. Pick better value `binwidth`.
 ```
 
-<img src="fig/is-it-normal-rendered-histogram-1.png" style="display: block; margin: auto;" />
+<img src="fig/is-it-normal-rendered-histogram-1.png" alt="" style="display: block; margin: auto;" />
 
 This does not really look like a normal distribution. The fact that mean
 and median are almost identical was not a sufficient criterium for
@@ -91,7 +91,7 @@ normal_test_data |>
   geom_density()
 ```
 
-<img src="fig/is-it-normal-rendered-densityplot-1.png" style="display: block; margin: auto;" />
+<img src="fig/is-it-normal-rendered-densityplot-1.png" alt="" style="display: block; margin: auto;" />
 
 We can think of this as a histogram with infinitely small bins.
 
@@ -125,7 +125,7 @@ normal_test_data |>
   geom_qq_line()
 ```
 
-<img src="fig/is-it-normal-rendered-qq-plot-1.png" style="display: block; margin: auto;" />
+<img src="fig/is-it-normal-rendered-qq-plot-1.png" alt="" style="display: block; margin: auto;" />
 
 The `geom_qq` function calculate and plots which percentile an
 observation is in.
@@ -158,7 +158,7 @@ wrong with the data - in regards to how it deviates from normalcy.
 | Above     | Above      | Right skewed | A tail that stretches to the higher values - the extreme values are larger. |
 | Below     | Below      | Left skewed  | A tail that stretches to the lower values - the extreme values are smaller. |
 
-<img src="fig/is-it-normal-rendered-unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
+<img src="fig/is-it-normal-rendered-unnamed-chunk-1-1.png" alt="" style="display: block; margin: auto;" />
 :::
 
 ## Numerical measures rather than graphical

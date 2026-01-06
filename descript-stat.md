@@ -472,7 +472,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/descript-stat-rendered-histogram-1.png" style="display: block; margin: auto;" />
+<img src="fig/descript-stat-rendered-histogram-1.png" alt="" style="display: block; margin: auto;" />
 
 By default ggplot chooses 30 bins, typically we should chose a different
 number:
@@ -489,7 +489,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/descript-stat-rendered-change_bin_n-1.png" style="display: block; margin: auto;" />
+<img src="fig/descript-stat-rendered-change_bin_n-1.png" alt="" style="display: block; margin: auto;" />
 
 Or, ideally, set the widths of them, manually:
 
@@ -506,7 +506,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/descript-stat-rendered-change_bin_width-1.png" style="display: block; margin: auto;" />
+<img src="fig/descript-stat-rendered-change_bin_width-1.png" alt="" style="display: block; margin: auto;" />
 Or even specify the exact intervals we want, here intervals from 0 to 6500 gram
 in intervals of 250 gram:
 
@@ -523,7 +523,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/descript-stat-rendered-bin_breaks-1.png" style="display: block; margin: auto;" />
+<img src="fig/descript-stat-rendered-bin_breaks-1.png" alt="" style="display: block; margin: auto;" />
 The histogram provides us with a visual indication of both range, the variation
 of the values, and an idea about where the data is located.
 
@@ -626,7 +626,7 @@ That was not very informative. Lets plot it:
 
 
 
-<img src="fig/descript-stat-rendered-cdf-plot-1.png" style="display: block; margin: auto;" />
+<img src="fig/descript-stat-rendered-cdf-plot-1.png" alt="" style="display: block; margin: auto;" />
 
 :::: instructor
 
@@ -818,7 +818,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_boxplot()`).
 ```
 
-<img src="fig/descript-stat-rendered-boxplots-1.png" style="display: block; margin: auto;" />
+<img src="fig/descript-stat-rendered-boxplots-1.png" alt="" style="display: block; margin: auto;" />
 
 The boxplot shows us the median (the fat line in the middel of each
 box), the 1st and 3rd quartiles (the ends of the boxes), and the range,

@@ -1,7 +1,7 @@
 ---
 title: 'Descriptive Statistics'
 teaching: 10
-exercises: 2
+exercises: 3
 editor_options: 
   markdown: 
     wrap: 72

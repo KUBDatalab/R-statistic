@@ -143,7 +143,7 @@ A slightly more cumbersome way is using the `summarise()` function from
 
 ``` r
 penguins |>
-  summarise(avg_mass = mean(body_mass_g, na.rm = T))
+  summarise(avg_mass = mean(body_mass_g, na.rm = TRUE))
 ```
 
 ``` output
@@ -258,8 +258,8 @@ function:
 
 ``` r
 penguins |>
-  summarise(min = min(body_mass_g, na.rm = T),
-            max = max(body_mass_g, na.rm = T))
+  summarise(min = min(body_mass_g, na.rm = TRUE),
+            max = max(body_mass_g, na.rm = TRUE))
 ```
 
 ``` output
@@ -279,7 +279,7 @@ If we would like to use the `range()` function, we can add it using the
 
 ``` r
 penguins |>
-  reframe(range = range(body_mass_g, na.rm = T))
+  reframe(range = range(body_mass_g, na.rm = TRUE))
 ```
 
 ``` output
@@ -367,7 +367,7 @@ for us:
 ``` r
 penguins |> 
   summarise(
-            variance = var(body_mass_g, na.rm = T)
+            variance = var(body_mass_g, na.rm = TRUE)
           )
 ```
 
@@ -406,7 +406,7 @@ deviation, simply defined as the square root of the variance:
 ``` r
 penguins |> 
   summarise(
-            s = sd(body_mass_g, na.rm = T)
+            s = sd(body_mass_g, na.rm = TRUE)
           )
 ```
 
@@ -545,7 +545,7 @@ We can calcultate those using the quantile function:
 
 
 ``` r
-quantile(penguins$body_mass_g, probs = .25, na.rm = T)
+quantile(penguins$body_mass_g, probs = .25, na.rm = TRUE)
 ```
 
 ``` output
@@ -557,7 +557,7 @@ and
 
 
 ``` r
-quantile(penguins$body_mass_g, probs = .75, na.rm = T)
+quantile(penguins$body_mass_g, probs = .75, na.rm = TRUE)
 ```
 
 ``` output
@@ -579,7 +579,7 @@ That is used often enough that we have a dedicated function for it:
 
 ``` r
 penguins |> 
-  summarise(iqr = IQR(body_mass_g, na.rm = T))
+  summarise(iqr = IQR(body_mass_g, na.rm = TRUE))
 ```
 
 ``` output
@@ -595,7 +595,7 @@ quantiles than quartiles. Actually we can calculate any quantile, eg the
 
 
 ``` r
-quantile(penguins$body_mass_g, probs = .025, na.rm = T)
+quantile(penguins$body_mass_g, probs = .025, na.rm = TRUE)
 ```
 
 ``` output
@@ -671,7 +671,7 @@ The following object is masked from 'package:ggplot2':
 ```
 
 ``` r
-skewness(penguins$body_mass_g, na.rm = T)
+skewness(penguins$body_mass_g, na.rm = TRUE)
 ```
 
 ``` output
@@ -702,7 +702,7 @@ We use the `e1071` package again:
 
 
 ``` r
-kurtosis(penguins$body_mass_g, na.rm = T)
+kurtosis(penguins$body_mass_g, na.rm = TRUE)
 ```
 
 ``` output
@@ -751,17 +751,17 @@ than one summarizing function to the summarise function:
 
 ``` r
 penguins |>
-  summarise(min = min(body_mass_g, na.rm = T),
-            max = max(body_mass_g, na.rm = T),
-            mean = mean(body_mass_g, na.rm = T),
-            median = median(body_mass_g, na.rm = T),
-            stddev = sd(body_mass_g, na.rm = T),
-            var = var(body_mass_g, na.rm = T),
-            Q1 = quantile(body_mass_g, probs = .25, na.rm = T),
-            Q3 = quantile(body_mass_g, probs = .75, na.rm = T),
-            iqr = IQR(body_mass_g, na.rm = T),
-            skew = skewness(body_mass_g, na.rm = T),
-            kurtosis = kurtosis(body_mass_g, na.rm = T)
+  summarise(min = min(body_mass_g, na.rm = TRUE),
+            max = max(body_mass_g, na.rm = TRUE),
+            mean = mean(body_mass_g, na.rm = TRUE),
+            median = median(body_mass_g, na.rm = TRUE),
+            stddev = sd(body_mass_g, na.rm = TRUE),
+            var = var(body_mass_g, na.rm = TRUE),
+            Q1 = quantile(body_mass_g, probs = .25, na.rm = TRUE),
+            Q3 = quantile(body_mass_g, probs = .75, na.rm = TRUE),
+            iqr = IQR(body_mass_g, na.rm = TRUE),
+            skew = skewness(body_mass_g, na.rm = TRUE),
+            kurtosis = kurtosis(body_mass_g, na.rm = TRUE)
   )
 ```
 
@@ -782,11 +782,11 @@ the species, we can group the data by species, before summarising:
 ``` r
 penguins |>
   group_by(species) |>
-  summarise(min = min(body_mass_g, na.rm = T),
-            max = max(body_mass_g, na.rm = T),
-            mean = mean(body_mass_g, na.rm = T),
-            median = median(body_mass_g, na.rm = T),
-            stddev = sd(body_mass_g, na.rm = T)
+  summarise(min = min(body_mass_g, na.rm = TRUE),
+            max = max(body_mass_g, na.rm = TRUE),
+            mean = mean(body_mass_g, na.rm = TRUE),
+            median = median(body_mass_g, na.rm = TRUE),
+            stddev = sd(body_mass_g, na.rm = TRUE)
   )
 ```
 
